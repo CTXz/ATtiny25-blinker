@@ -83,7 +83,7 @@ int main(void)
       _delay_ms(10);
 
       // Check if the mode has changed every 10 seconds
-      if (get_mode(LED_L_R_MASK) != mode) {
+      if (get_mode(MODE_SW_MASK) != mode) {
         mode = !mode;
         set_mode(mode, LED_L_MASK, LED_R_MASK, LED_L_R_MASK);
         break;
