@@ -39,20 +39,20 @@
 /* Blinking Modes */
 
 // get_mode
-//
+// ------------------------------------
 // Fetches the state of the mode switch
-//
+// ------------------------------------
 inline bool get_mode(uint8_t mode_sw_mask)
 {
   return PINB & MODE_SW_MASK;
 }
 
 // set_mode
-//
+//----------------------------------------------------------
 // Prepares the LEDs for toggling
 // When mode = true, the LEDs will toggle simultaneously
 // When mode = false, the LEDs will switch with every toggle
-//
+// ---------------------------------------------------------
 inline void set_mode(bool mode, uint8_t led_l_mask, uint8_t led_r_mask, uint8_t led_l_r_mask)
 {
   if (mode) {
